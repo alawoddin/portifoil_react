@@ -33,14 +33,14 @@ const Contact = () => {
     {
       icon: <Mail size={24} />,
       title: "Email",
-      value: "hashmatullahm90@gmail.com",
-      link: "hashmatullahm90@gmail.com"
+      value: "alawoddinkhan84@gmail.com",
+      link: "alawoddinkhan84@gmail.com"
     },
     {
       icon: <Phone size={24} />,
       title: "Phone",
-      value: "+93 (793) 283-079",
-      link: "tel:+93793283079"
+      value: "+93 (744) 620-492",
+      link: "tel:+93744620492"
     },
     {
       icon: <MapPin size={24} />,
@@ -163,7 +163,7 @@ const Contact = () => {
                         ? 'border-red-500 focus:ring-red-500' 
                         : 'border-gray-300 dark:border-gray-700 focus:ring-primary-500'
                     } bg-white dark:bg-gray-800 focus:outline-none focus:ring-2`}
-                    placeholder="John Doe"
+                    placeholder="demo"
                   />
                   {errors.name && (
                     <p className="text-red-500 text-sm mt-1">{errors.name}</p>
@@ -185,7 +185,7 @@ const Contact = () => {
                         ? 'border-red-500 focus:ring-red-500' 
                         : 'border-gray-300 dark:border-gray-700 focus:ring-primary-500'
                     } bg-white dark:bg-gray-800 focus:outline-none focus:ring-2`}
-                    placeholder="john@example.com"
+                    placeholder="demo@gmail.com"
                   />
                   {errors.email && (
                     <p className="text-red-500 text-sm mt-1">{errors.email}</p>
@@ -321,7 +321,7 @@ const Contact = () => {
                   Have a project in mind? I'm currently available for freelance work.
                 </p>
                 <a 
-                  href="mailto:contact@hashmatullah.dev" 
+                  href="alawoddinkhan84@gmail.com" 
                   className="inline-block px-6 py-2 bg-white text-primary-600 rounded-md font-medium hover:bg-gray-100 transition-colors"
                 >
                   Start a Conversation
