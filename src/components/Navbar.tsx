@@ -58,7 +58,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
           transition={{ duration: 0.5 }}
         >
           <Code size={28} className="text-primary-500" />
-          <span className="text-gradient font-display">Hashmatullah</span>
+          <span className="text-gradient font-display">Alawoddin</span>
         </motion.a>
         
         {/* Desktop Navigation */}

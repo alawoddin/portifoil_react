@@ -5,12 +5,12 @@ import SectionHeading from './SectionHeading';
 
 const About = () => {
   const aboutData = {
-    image: "https://images.pexels.com/photos/4974915/pexels-photo-4974915.jpeg?auto=compress&cs=tinysrgb&w=800",
-    description: "I'm a passionate front-end developer with 5+ years of experience creating beautiful, responsive, and user-focused web applications. I specialize in translating designs into pixel-perfect interfaces with clean, maintainable code.",
-    bio: "My journey began with a deep interest in both design and technology, which naturally led me to front-end development where I could blend both passions. I'm constantly exploring new technologies and design trends to stay at the cutting edge of web development.",
+    image: "public/image/a3.jpg",
+    description: `Hi! I'm alawoddin khedmat. I'm a web developer with a serious love for teaching I am  a passionate Web Developer, Programmer & Instructor.`,
+    bio: `I am working online for the last 4 years and have created several successful websites running on the internet. I try to create a project-based course that helps you to learn professionally and make you fell as a complete developer. easy learning exists to help you succeed in life.`,
     stats: [
-      { icon: <Code size={20} />, label: "Projects Completed", value: "50+" },
-      { icon: <Briefcase size={20} />, label: "Years of Experience", value: "5+" },
+      { icon: <Code size={20} />, label: "Projects Completed", value: "40+" },
+      { icon: <Briefcase size={20} />, label: "Years of Experience", value: "4+" },
       { icon: <Award size={20} />, label: "Satisfied Clients", value: "30+" },
       { icon: <GraduationCap size={20} />, label: "Certifications", value: "8" },
     ]
@@ -47,8 +47,8 @@ const About = () => {
             
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent flex items-end">
               <div className="p-6 text-white">
-                <h3 className="text-2xl font-bold">Hashmatullah</h3>
-                <p className="text-gray-200">Front-End Developer</p>
+                <h3 className="text-2xl font-bold">Alawoddin</h3>
+                <p className="text-gray-200">Full-Stuck-Web Developer</p>
               </div>
             </div>
           </motion.div>

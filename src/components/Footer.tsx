@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, ArrowUp, Github, Linkedin, Twitter } from 'lucide-react';
+import { Code, ArrowUp, Github, Linkedin, Facebook } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -16,14 +16,14 @@ const Footer = () => {
           <div>
             <a href="#home" className="flex items-center gap-2 font-bold text-2xl mb-4">
               <Code size={28} className="text-primary-500" />
-              <span className="text-gradient font-display">Hashmatullah Mohammadi</span>
+              <span className="text-gradient font-display">Alawoddin Khedmat</span>
             </a>
             <p className="text-gray-400 mb-6">
               Creating beautiful digital experiences with clean, efficient code.
             </p>
             <div className="flex gap-4">
               <a
-                href="https://github.com/"
+                href="https://github.com/alawoddin"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-colors"
@@ -32,7 +32,7 @@ const Footer = () => {
                 <Github size={18} />
               </a>
               <a
-                href="https://linkedin.com/"
+                href="https://www.linkedin.com/in/info-khedmat-a58b58343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-colors"
@@ -41,13 +41,13 @@ const Footer = () => {
                 <Linkedin size={18} />
               </a>
               <a
-                href="https://twitter.com/"
+                href="https://www.facebook.com/share/17gPjNTeFe/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-colors"
                 aria-label="Twitter"
               >
-                <Twitter size={18} />
+                <Facebook size={18} />
               </a>
             </div>
           </div>
@@ -82,12 +82,12 @@ const Footer = () => {
               <p>Kabul, Pul-e-Surkh</p>
               <p>
                 <a href="hashmatullahm90@gmail.com" className="hover:text-primary-400 transition-colors">
-                  hashmatullahm90@gmail.com
+                  alawoddinkhan84@gmail.com
                 </a>
               </p>
               <p>
                 <a href="tel:+15551234567" className="hover:text-primary-400 transition-colors">
-                  +93 (793) 283-079
+                  +93 (744) 620-492
                 </a>
               </p>
             </address>
@@ -96,7 +96,7 @@ const Footer = () => {
         
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between">
           <p className="text-gray-500 text-sm mb-4 sm:mb-0">
-            &copy; {new Date().getFullYear()} Hashmatullah Mohammadi. All rights reserved.
+            &copy; {new Date().getFullYear()} Alawoddin Khedmat. All rights reserved.
           </p>
           
           <button

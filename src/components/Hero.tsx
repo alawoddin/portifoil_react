@@ -42,7 +42,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
           >
             <span className="inline-block px-4 py-1.5 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 rounded-full text-sm font-medium mb-4">
-              Front-End Developer
+              Full Stack Web Developer
             </span>
           </motion.div>
           
@@ -61,7 +61,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
           >
-            I'm , a front-end developer passionate about building stunning, 
+            I'm Aalawoddin Khedmat, a Full Stack Web Developer passionate about building stunning, 
             user-centric interfaces that merge aesthetics with functionality.
           </motion.p>
           
@@ -96,7 +96,7 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.8 }}
           >
             <motion.a
-              href="https://github.com/"
+              href="https://github.com/alawoddin"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-primary-500 dark:text-gray-400 dark:hover:text-primary-400"
@@ -106,7 +106,7 @@ const Hero = () => {
               <Github size={24} />
             </motion.a>
             <motion.a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/info-khedmat-a58b58343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-primary-500 dark:text-gray-400 dark:hover:text-primary-400"
@@ -116,7 +116,7 @@ const Hero = () => {
               <Linkedin size={24} />
             </motion.a>
             <motion.a
-              href="https://twitter.com/"
+              href="https://www.facebook.com/share/17gPjNTeFe/?mibextid=wwXIfr"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-primary-500 dark:text-gray-400 dark:hover:text-primary-400"
