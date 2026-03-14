@@ -17,9 +17,9 @@ const Experience = () => {
       ]
     },
     {
-      company: "Digital Creators Agency",
+      company: "Backend Developer",
       position: "Front-End Developer",
-      duration: "2020 - 2022",
+      duration: "2022 - 2025",
       description: "Developed interactive web applications and e-commerce solutions for various clients using React, Vue, and modern CSS techniques.",
       achievements: [
         "Delivered 15+ client projects with 100% satisfaction rate",
@@ -29,8 +29,8 @@ const Experience = () => {
     },
     {
       company: "WebSolve Solutions",
-      position: "UI Developer",
-      duration: "2018 - 2020",
+      position: "Developer",
+      duration: "2022 - Present",
       description: "Designed and developed user interfaces for web applications focusing on usability and visual appeal.",
       achievements: [
         "Transformed static designs into fully functional, responsive interfaces",
