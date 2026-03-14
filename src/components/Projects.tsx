@@ -1,0 +1,279 @@
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, ExternalLink, Github, Maximize } from 'lucide-react';
+import SectionHeading from './SectionHeading';
+import ProjectModal from './ProjectModal';
+
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  category: string;
+  demoLink: string;
+  githubLink: string;
+  details: string;
+  features: string[];
+}
+
+const Projects = () => {
+  const [filter, setFilter] = useState('all');
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  
+  const categories = [
+    { id: 'all', name: 'All Projects' },
+    { id: 'web', name: 'Web Apps' },
+    { id: 'ui', name: 'UI Design' },
+    { id: 'mobile', name: 'Mobile' },
+  ];
+  
+  const projects: Project[] = [
+    {
+      id: 1,
+      title: "E-Commerce Dashboard",
+      description: "A responsive admin dashboard for managing products, orders, and customers.",
+      image: "https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      tags: ["React", "TypeScript", "Redux", "TailwindCSS"],
+      category: "web",
+      demoLink: "https://example.com",
+      githubLink: "https://github.com",
+      details: "A comprehensive e-commerce dashboard with real-time analytics, inventory management, and order processing capabilities. Built with performance and scalability in mind.",
+      features: [
+        "Real-time sales analytics and reporting",
+        "Inventory management system",
+        "Customer relationship management",
+        "Order processing and tracking",
+        "User authentication and role-based access control"
+      ]
+    },
+    {
+      id: 2,
+      title: "Travel Booking Platform",
+      description: "A beautiful travel booking site with interactive maps and custom animations.",
+      image: "https://images.pexels.com/photos/3769138/pexels-photo-3769138.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      tags: ["Vue.js", "Nuxt", "GSAP", "Mapbox"],
+      category: "web",
+      demoLink: "https://example.com",
+      githubLink: "https://github.com",
+      details: "A modern travel booking platform with interactive maps, immersive experiences, and smooth animations. The platform allows users to discover destinations, compare prices, and book accommodations.",
+      features: [
+        "Interactive maps with custom markers",
+        "Destination search and filtering",
+        "Availability calendar with real-time updates",
+        "Booking management system",
+        "Payment integration with multiple providers"
+      ]
+    },
+    {
+      id: 3,
+      title: "Finance App UI Kit",
+      description: "A comprehensive UI kit for finance applications with 50+ components.",
+      image: "https://images.pexels.com/photos/6801647/pexels-photo-6801647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      tags: ["Figma", "Design System", "Prototyping"],
+      category: "ui",
+      demoLink: "https://example.com",
+      githubLink: "https://github.com",
+      details: "A comprehensive UI kit specifically designed for financial applications and dashboards. The kit includes over 50 reusable components with various states and variations.",
+      features: [
+        "50+ reusable components",
+        "Dark and light mode variants",
+        "Financial chart and graph components",
+        "Complete design system with color palettes",
+        "Interactive prototypes and documentation"
+      ]
+    },
+    {
+      id: 4,
+      title: "Fitness Tracker App",
+      description: "A cross-platform mobile app for tracking workouts and nutrition.",
+      image: "https://images.pexels.com/photos/4482900/pexels-photo-4482900.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      tags: ["React Native", "Firebase", "Redux", "Expo"],
+      category: "mobile",
+      demoLink: "https://example.com",
+      githubLink: "https://github.com",
+      details: "A feature-rich fitness tracking application designed to help users monitor their workouts, nutrition, and overall progress. The app provides personalized recommendations based on user activities.",
+      features: [
+        "Custom workout creation and tracking",
+        "Nutrition diary with calorie calculation",
+        "Progress charts and statistics",
+        "Social features for sharing achievements",
+        "Integration with wearable devices"
+      ]
+    },
+    {
+      id: 5,
+      title: "Task Management Platform",
+      description: "A collaborative task management tool with real-time updates.",
+      image: "https://images.pexels.com/photos/7794343/pexels-photo-7794343.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      tags: ["React", "Node.js", "WebSocket", "MongoDB"],
+      category: "web",
+      demoLink: "https://example.com",
+      githubLink: "https://github.com",
+      details: "A collaborative task management platform designed for teams with real-time communication and project tracking capabilities. The platform helps teams organize work, track progress, and meet deadlines.",
+      features: [
+        "Real-time collaboration with WebSockets",
+        "Kanban and list views for tasks",
+        "Team and permission management",
+        "File sharing and comments",
+        "Automated reminders and notifications"
+      ]
+    },
+    {
+      id: 6,
+      title: "Meditation App Design",
+      description: "A calming UI design for a meditation and mindfulness application.",
+      image: "https://images.pexels.com/photos/3927391/pexels-photo-3927391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      tags: ["Adobe XD", "Illustration", "UI/UX", "Animation"],
+      category: "ui",
+      demoLink: "https://example.com",
+      githubLink: "https://github.com",
+      details: "A soothing and calming user interface design for a meditation and mindfulness application. The design focuses on creating a peaceful environment that encourages relaxation and focus.",
+      features: [
+        "Calming color palette and visual elements",
+        "Intuitive meditation timer and tracker",
+        "Custom illustrations and iconography",
+        "Smooth transitions and micro-interactions",
+        "Audio visualization components"
+      ]
+    },
+  ];
+  
+  const filteredProjects = filter === 'all' 
+    ? projects 
+    : projects.filter(project => project.category === filter);
+  
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  };
+  
+  return (
+    <section id="projects" className="section bg-gray-50 dark:bg-gray-900/50">
+      <div className="container-custom">
+        <SectionHeading 
+          title="My Projects" 
+          subtitle="Recent work I've created"
+        />
+        
+        <div className="flex flex-wrap justify-center gap-4 mt-12 mb-12">
+          {categories.map((category) => (
+            <motion.button
+              key={category.id}
+              className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
+                filter === category.id
+                  ? 'bg-primary-500 text-white'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+              }`}
+              onClick={() => setFilter(category.id)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {category.name}
+            </motion.button>
+          ))}
+        </div>
+        
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <AnimatePresence>
+            {filteredProjects.map((project) => (
+              <motion.div 
+                key={project.id}
+                className="card overflow-hidden group"
+                variants={itemVariants}
+                layout
+                whileHover={{ y: -5 }}
+              >
+                <div className="relative overflow-hidden h-48 -mx-6 -mt-6 mb-6">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                    <div className="flex space-x-3">
+                      <a 
+                        href={project.demoLink}
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-white/90 flex items-center justify-center text-gray-900 hover:bg-primary-500 hover:text-white transition-colors"
+                        aria-label="Live Demo"
+                      >
+                        <ExternalLink size={16} />
+                      </a>
+                      <a 
+                        href={project.githubLink}
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-white/90 flex items-center justify-center text-gray-900 hover:bg-primary-500 hover:text-white transition-colors"
+                        aria-label="GitHub Repository"
+                      >
+                        <Github size={16} />
+                      </a>
+                    </div>
+                    <button 
+                      onClick={() => setSelectedProject(project)}
+                      className="w-8 h-8 rounded-full bg-white/90 flex items-center justify-center text-gray-900 hover:bg-primary-500 hover:text-white transition-colors"
+                      aria-label="View Details"
+                    >
+                      <Maximize size={16} />
+                    </button>
+                  </div>
+                </div>
+                
+                <div className="flex flex-wrap gap-2 mb-3">
+                  {project.tags.map((tag, index) => (
+                    <span 
+                      key={index}
+                      className="inline-block px-2 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                
+                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
+                
+                <button 
+                  onClick={() => setSelectedProject(project)}
+                  className="inline-flex items-center text-primary-600 dark:text-primary-400 font-medium hover:text-primary-700 dark:hover:text-primary-300"
+                >
+                  <span>View Details</span>
+                  <ArrowRight size={16} className="ml-1" />
+                </button>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+      </div>
+      
+      <ProjectModal 
+        project={selectedProject} 
+        onClose={() => setSelectedProject(null)} 
+      />
+    </section>
+  );
+};
+
+export default Projects;
