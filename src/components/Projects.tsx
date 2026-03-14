@@ -24,8 +24,8 @@ const Projects = () => {
   const categories = [
     { id: 'all', name: 'All Projects' },
     { id: 'web', name: 'Web Apps' },
-    { id: 'ui', name: 'UI Design' },
-    { id: 'mobile', name: 'Mobile' },
+    { id: 'api', name: 'API' },
+ 
   ];
   
   const projects: Project[] = [
@@ -71,7 +71,7 @@ const Projects = () => {
       description: "A comprehensive cars-wash-with-laravel for finance applications with 50+ components.",
       image: "https://images.pexels.com/photos/6801647/pexels-photo-6801647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       tags: ["Figma", "Design System", "laravel" , "mysql" , "javascript"],
-      category: "ui",
+      category: "web",
       demoLink: "https://github.com/alawoddin/cars-wash-with-laravel",
       githubLink: "https://github.com/alawoddin/cars-wash-with-laravel",
       details: "A comprehensive UI kit specifically designed for financial applications and dashboards. The kit includes over 50 reusable components with various states and variations.",
@@ -89,7 +89,7 @@ const Projects = () => {
       description: "A cross-platform food-website  for Order online the best food.",
       image: "https://images.pexels.com/photos/4482900/pexels-photo-4482900.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       tags: ["Laravel", "Mongodb", "javascript", "jquery"],
-      category: "mobile",
+      category: "web",
       demoLink: "https://github.com/alawoddin/food-website",
       githubLink: "https://github.com/alawoddin/food-website",
       details: "A feature-rich fitness tracking application designed to help users monitor their workouts, nutrition, and overall progress. The app provides personalized recommendations based on user activities.",
@@ -125,7 +125,7 @@ const Projects = () => {
       description: "A laravel-insetia for Signal Page  application.",
       image: "https://images.pexels.com/photos/3927391/pexels-photo-3927391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       tags: ["laravel", "mysql", "Tailwind", "Jquery"],
-      category: "ui",
+      category: "web",
       demoLink: "https://github.com/alawoddin/laravel-insetia",
       githubLink: "https://github.com/alawoddin/laravel-insetia",
       details: "A soothing and calming user interface design for a meditation and mindfulness application. The design focuses on creating a peaceful environment that encourages relaxation and focus.",
@@ -137,6 +137,64 @@ const Projects = () => {
         "Audio visualization components"
       ]
     },
+
+     {
+      id: 7,
+      title: "chat-application",
+      description: "A chat-application with nextjs application.",
+      image: "https://images.pexels.com/photos/3927391/pexels-photo-3927391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      tags: ["nextjs", "antd", "socket", "clerk"],
+      category: "api",
+      demoLink: "https://github.com/alawoddin/chat-application",
+      githubLink: "https://github.com/alawoddin/chat-application",
+      details: "A  user interface design for a user and userinterface application. The design focuses on creating a peaceful environment that encourages relaxation and focus.",
+      features: [
+        "Calming color palette and visual elements",
+        "Intuitive meditation timer and tracker",
+        "Custom illustrations and iconography",
+        "Smooth transitions and micro-interactions",
+        "Audio visualization components"
+      ]
+    },
+
+         {
+      id: 8,
+      title: "laravel-react",
+      description: "A laravel-react for Signal Page application.",
+      image: "https://images.pexels.com/photos/3927391/pexels-photo-3927391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      tags: ["laravel", "mysql", "Tailwind", "react"],
+      category: "api",
+      demoLink: "https://github.com/alawoddin/laravel-react",
+      githubLink: "https://github.com/alawoddin/laravel-react",
+      details: "in this project the admin add the data in backend the restful api is show to frontend The design focuses on creating a peaceful environment that encourages relaxation and focus.",
+      features: [
+        "Calming color palette and visual elements",
+        "Intuitive meditation timer and tracker",
+        "Custom illustrations and iconography",
+        "Smooth transitions and micro-interactions",
+        "Audio visualization components"
+      ]
+    },
+
+         {
+      id: 9,
+      title: "Nextjs-project",
+      description: "A https://github.com/alawoddin/nextjs-project for Signal Page  application.",
+      image: "https://images.pexels.com/photos/3927391/pexels-photo-3927391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      tags: ["nextjs", "routedom", "useeffect", "hook"],
+      category: "api",
+      demoLink: "https://github.com/alawoddin/nextjs-project",
+      githubLink: "https://github.com/alawoddin/nextjs-project",
+      details: "A soothing and calming user interface design for a meditation and mindfulness application. The design focuses on creating a peaceful environment that encourages relaxation and focus.",
+      features: [
+        "Calming color palette and visual elements",
+        "Intuitive meditation timer and tracker",
+        "Custom illustrations and iconography",
+        "Smooth transitions and micro-interactions",
+        "Audio visualization components"
+      ]
+    },
+
   ];
   
   const filteredProjects = filter === 'all' 
