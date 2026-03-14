@@ -3,9 +3,10 @@ import { motion } from 'framer-motion';
 import SectionHeading from './SectionHeading';
 
 const Skills = () => {
-  const [activeCategory, setActiveCategory] = useState('core');
+  const [activeCategory, setActiveCategory] = useState('language');
   
   const categories = [
+    { id: 'language', name: 'Language' },
     { id: 'core', name: 'Core Skills' },
     { id: 'frameworks', name: 'Frameworks' },
     { id: 'libraries', name: 'Libraries' },
@@ -13,6 +14,17 @@ const Skills = () => {
   ];
   
   const skills = {
+
+     language: [
+      { name: 'C++', level: 92 },
+      { name: 'JAVASCRIPT', level: 95 },
+      { name: 'JAVA', level: 90 },
+      { name: 'PHP', level: 95 },
+      { name: 'PYTHON', level: 88 },
+      { name: 'DART', level: 90 },
+
+    ],
+
     core: [
       { name: 'HTML5', level: 95 },
       { name: 'CSS3', level: 92 },
@@ -24,13 +36,15 @@ const Skills = () => {
       { name: 'Cross-Browser Compatibility', level: 88 },
     ],
     frameworks: [
+      { name: 'Laravel', level: 92 },
+      { name: 'Django', level: 85 },
       { name: 'React', level: 90 },
       { name: 'Bootstrap', level: 92 },
       { name: 'TailwindCSS', level: 85 },
       { name: 'Material UI', level: 82 },
-      { name: 'Chakra UI', level: 80 },
+      { name: 'Inertia.js', level: 80 },
       { name: 'Next.js', level: 78 },
-      { name: 'Express.js', level: 75 },
+      { name: 'Angular.js', level: 75 },
       { name: 'jQuery', level: 85 },
     ],
     libraries: [
@@ -51,7 +65,7 @@ const Skills = () => {
       { name: 'Webpack', level: 80 },
       { name: 'Vite', level: 85 },
       { name: 'ESLint', level: 85 },
-      { name: 'Jest', level: 78 },
+      { name: 'Docker', level: 88 },
     ],
   };
 
