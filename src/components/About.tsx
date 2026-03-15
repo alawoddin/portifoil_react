@@ -5,7 +5,7 @@ import SectionHeading from './SectionHeading';
 
 const About = () => {
   const aboutData = {
-    image: "public/image/a3.jpg",
+    image: "/image/a3.jpg",
     description: `Hi! I'm alawoddin khedmat. I'm a web developer with a serious love for teaching I am  a passionate Web Developer, Programmer & Instructor.`,
     bio: `I am working online for the last 4 years and have created several successful websites running on the internet. I try to create a project-based course that helps you to learn professionally and make you fell as a complete developer. easy learning exists to help you succeed in life.`,
     stats: [
@@ -41,7 +41,7 @@ const About = () => {
           >
             <img 
               src={aboutData.image} 
-              alt="Hashmatullah Portrait" 
+              alt="alawoddin Portrait" 
               className="w-full h-full object-cover object-center"
             />
             
