@@ -180,7 +180,7 @@ const Projects = () => {
       id: 9,
       title: "Ecommers-with-next",
       description: "A https://github.com/alawoddin/nextjs-project for Signal Page  application.",
-      image: "https://deerdesigner.com/wp-content/uploads/2024/05/Article-34-ecommerce-design-01.png",
+      image: "https://www.datocms-assets.com/48401/1628644925-nextjsspae-commerce.png",
       tags: ["nextjs", "routedom", "useeffect", "hook"],
       category: "api",
       demoLink: "https://github.com/alawoddin/nextjs-project",
